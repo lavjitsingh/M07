@@ -2,20 +2,27 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Title of the document</title>
+        <title>Joc de la mona</title>
     </head>
 
     <body>
 
+
+
         <?php
         $suits = array(
-            "Picas", "Corazones", "Tréboles", "Diamantes"
+            "Spades", "Hearts", "Clubs", "Diamonds"
         );
 
         $faces = array(
-            "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Ocho",
-            "Nueve", "Diez", "J", "Q", "K", "As"
+            "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+            "Nine", "Ten", "Jack", "Queen", "King", "Ace"
         );
+
+        $player01 = array();
+        $player02 = array();
+        $player03 = array();
+
 
         $deck = array();
 
@@ -24,8 +31,20 @@
                 $deck[] = array("face" => $face, "suit" => $suit);
             }
         }
-        shuffle($deck);
 
+        $i = 0;
+        $find = false;
+        while ($i < count($deck) or find == TRUE) {
+            if ($deck[$i] == 'Five of Diamonds') {
+                unset($deck[50]);
+            }
+        }
+        
+        
+        
+        print_r($deck);
+
+        shuffle($deck);
         $card = array_shift($deck);
 
         echo $card['face'] . ' of ' . $card['suit'];
